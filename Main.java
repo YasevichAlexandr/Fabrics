@@ -50,6 +50,8 @@ class ThirdFactory implements Factory {
     }
 }
 
+//Interface
+
 interface Factory<T> {
     T create(String type);
 }
@@ -64,7 +66,7 @@ class AbstractFactory implements Factory {
     }
 }
 
-class Test {
+class Test {  //create+sayTarget
     public static void main(String[] args ){
         Factory<Factory> aFactory = new AbstractFactory();
         Factory<IFirst> firstFactory = aFactory.create("one");
@@ -84,3 +86,5 @@ class Test {
         four.sayTarget();
     }
 }
+
+//+Tests()
